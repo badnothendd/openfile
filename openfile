@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+ int main () {
+ int sifre;
+FILE *fp;
+	 fp = fopen("sifre.txt","w+");
+   if(fp == NULL) {
+   	printf("sifre.txt dosyasi acilmadi. !\n");
+   	exit(1);
+   }
+   printf("Menuyu gormek icin sifreyi giriniz.(12345)\n");
+   scanf("%d",sifre);
+    fprintf(fp, "%d", 12345);
+    fclose(fp);
+    return 0;
+ 
+}
